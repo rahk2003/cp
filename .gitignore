@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+.env
+*.tif
+*.tiff
+*.zip
+*.pt
+*.pth
+*.h5
+*.ckpt
+outputs/
+runs/
+data/
+datasets/
