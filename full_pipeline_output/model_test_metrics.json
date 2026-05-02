@@ -1,0 +1,9 @@
+{
+  "num_images": 1200,
+  "num_predicted_masks": 1200,
+  "num_images_without_crs": 0,
+  "threshold": 0.5,
+  "mean_dice": null,
+  "confusion_matrix": null,
+  "source_dir": "/Users/rana/Documents/tuwaiq/CP/Oil"
+}

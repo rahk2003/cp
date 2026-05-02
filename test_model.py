@@ -8,8 +8,8 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classifica
 # =========================
 # عدلي هذي فقط إذا احتجتي
 # =========================
-BASE_DIR = Path("/Users/rana/Desktop/tuwaiq/CP/preprocessed_dataset")
-MODEL_PATH = Path("/Users/rana/Desktop/tuwaiq/CP/best_deeplab.keras")
+BASE_DIR = Path("/Users/rana/Documents/tuwaiq/CP/preprocessed_dataset")
+MODEL_PATH = Path("/Users/rana/Documents/tuwaiq/CP/best_deeplab.keras")
 
 IMG_SIZE = 256
 BATCH_SIZE = 4

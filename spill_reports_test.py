@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import rasterio
 import csv
+import pandas as pd
 
 # =========================
 # الإعدادات
@@ -13,8 +14,40 @@ PRED_MASK_DIR = Path("/Users/rana/Desktop/tuwaiq/CP/predicted_masks/test")
 OUTPUT_DIR    = Path("/Users/rana/Desktop/tuwaiq/CP/spill_reports_test")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
+# ملف نتائج قرب الصور من اليابسة 
+LAND_PROX_CSV = Path("/Users/rana/Documents/tuwaiq/CP/tif_land_buffer_results.csv")
+
 PIXEL_SIZE_M = 0.5
 MAX_SAMPLES  = None
+
+
+# =========================
+# تحميل نتائج القرب من اليابسة
+# =========================
+def load_land_proximity(csv_path: Path):
+    if not csv_path.exists():
+        print(f"Warning: land proximity CSV not found: {csv_path}")
+        return {}
+
+    df = pd.read_csv(csv_path)
+
+    # نتأكد من الأعمدة
+    required_cols = {"filename", "nearest_buffer_m", "nearest_buffer_km", "class"}
+    missing = required_cols - set(df.columns)
+    if missing:
+        raise ValueError(f"Missing columns in land proximity CSV: {missing}")
+
+    proximity_map = {}
+    for _, row in df.iterrows():
+        proximity_map[str(row["filename"])] = {
+            "distance_to_land_m": None if pd.isna(row["nearest_buffer_m"]) else float(row["nearest_buffer_m"]),
+            "distance_to_land_km": None if pd.isna(row["nearest_buffer_km"]) else float(row["nearest_buffer_km"]),
+            "land_proximity_class": str(row["class"]),
+        }
+    return proximity_map
+
+
+LAND_PROXIMITY_MAP = load_land_proximity(LAND_PROX_CSV)
 
 
 # =========================
@@ -56,7 +89,7 @@ def analyze_spill(mask_2d: np.ndarray, pixel_size_m: float = 1.0):
     else:
         cx, cy = 0, 0
 
-    # Contours / Boundaries
+    # Contours
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     # Perimeter
@@ -101,8 +134,8 @@ def analyze_spill(mask_2d: np.ndarray, pixel_size_m: float = 1.0):
     spill_pixels = mask_2d[mask_2d > 0.5]
     if len(spill_pixels) > 0:
         mean_intensity = round(float(np.mean(spill_pixels)), 4)
-        max_intensity  = round(float(np.max(spill_pixels)),  4)
-        std_intensity  = round(float(np.std(spill_pixels)),  4)
+        max_intensity  = round(float(np.max(spill_pixels)), 4)
+        std_intensity  = round(float(np.std(spill_pixels)), 4)
         density_score  = round(float(np.sum(spill_pixels) / (area_px + 1e-8)), 4)
     else:
         mean_intensity = max_intensity = std_intensity = density_score = 0.0
@@ -128,22 +161,23 @@ def analyze_spill(mask_2d: np.ndarray, pixel_size_m: float = 1.0):
 
 
 # =========================
+# Land Proximity Helper
+# =========================
+def get_land_proximity(filename: str):
+    return LAND_PROXIMITY_MAP.get(filename, {
+        "distance_to_land_m": None,
+        "distance_to_land_km": None,
+        "land_proximity_class": "unknown"
+    })
+
+
+# =========================
 # Risk Engine
 # =========================
 def compute_risk(features: dict) -> dict:
-    """
-    يحسب risk score من 0-100 بناءً على 4 عوامل:
-    - coverage_pct  : كلما زادت المساحة زاد الخطر
-    - spread_ratio  : كلما زاد الامتداد زاد الخطر
-    - num_components: تعدد المكونات يرفع الخطر
-    - density_score : كلما اقتربت من 1.0 زاد الخطر
-
-    Returns: dict يحتوي risk_score, risk_level, risk_factors
-    """
     score = 0.0
     factors = []
 
-    # — Coverage (وزن 40%) ────────────────────────────────
     cov = features["coverage_pct"]
     if cov >= 50:
         score += 40
@@ -158,10 +192,8 @@ def compute_risk(features: dict) -> dict:
         score += 10
         factors.append(f"coverage {cov}% → LOW (2-10%)")
     else:
-        score += 0
         factors.append(f"coverage {cov}% → MINIMAL (<2%)")
 
-    # — Spread ratio (وزن 25%) ────────────────────────────
     sr = features["spread_ratio"]
     if sr >= 10:
         score += 25
@@ -176,7 +208,6 @@ def compute_risk(features: dict) -> dict:
         score += 4
         factors.append(f"spread_ratio {sr} → LOW (<2, compact shape)")
 
-    # — Connected components (وزن 20%) ───────────────────
     nc = features["num_components"]
     if nc >= 5:
         score += 20
@@ -191,10 +222,8 @@ def compute_risk(features: dict) -> dict:
         score += 3
         factors.append(f"components {nc} → LOW (1, single blob)")
     else:
-        score += 0
         factors.append(f"components {nc} → NONE (no spill detected)")
 
-    # — Density score (وزن 15%) ───────────────────────────
     ds = features["density_score"]
     if ds >= 0.95:
         score += 15
@@ -211,7 +240,6 @@ def compute_risk(features: dict) -> dict:
 
     score = round(min(score, 100), 1)
 
-    # — Risk Level ─────────────────────────────────────────
     if score >= 75:
         level = "CRITICAL"
     elif score >= 50:
@@ -245,32 +273,36 @@ CSV_FIELDS = [
     "num_components",
     "compactness",
     "mean_intensity", "max_intensity", "std_intensity", "density_score",
+    "distance_to_land_m", "distance_to_land_km", "land_proximity_class",
     "risk_score", "risk_level",
     "risk_factors",
 ]
 
-def write_csv_row(writer, filename, features, risk):
+def write_csv_row(writer, filename, features, land_info, risk):
     cx, cy = features["centroid"]
     writer.writerow({
-        "filename":        filename,
-        "area_px":         features["area_px"],
-        "area_m2":         features["area_m2"],
-        "coverage_pct":    features["coverage_pct"],
-        "centroid_x":      cx,
-        "centroid_y":      cy,
-        "perimeter_px":    features["perimeter_px"],
-        "perimeter_m":     features["perimeter_m"],
-        "orientation_deg": features["orientation_deg"],
-        "spread_ratio":    features["spread_ratio"],
-        "num_components":  features["num_components"],
-        "compactness":     features["compactness"],
-        "mean_intensity":  features["mean_intensity"],
-        "max_intensity":   features["max_intensity"],
-        "std_intensity":   features["std_intensity"],
-        "density_score":   features["density_score"],
-        "risk_score":      risk["risk_score"],
-        "risk_level":      risk["risk_level"],
-        "risk_factors":    " | ".join(risk["risk_factors"]),
+        "filename":             filename,
+        "area_px":              features["area_px"],
+        "area_m2":              features["area_m2"],
+        "coverage_pct":         features["coverage_pct"],
+        "centroid_x":           cx,
+        "centroid_y":           cy,
+        "perimeter_px":         features["perimeter_px"],
+        "perimeter_m":          features["perimeter_m"],
+        "orientation_deg":      features["orientation_deg"],
+        "spread_ratio":         features["spread_ratio"],
+        "num_components":       features["num_components"],
+        "compactness":          features["compactness"],
+        "mean_intensity":       features["mean_intensity"],
+        "max_intensity":        features["max_intensity"],
+        "std_intensity":        features["std_intensity"],
+        "density_score":        features["density_score"],
+        "distance_to_land_m":   land_info["distance_to_land_m"],
+        "distance_to_land_km":  land_info["distance_to_land_km"],
+        "land_proximity_class": land_info["land_proximity_class"],
+        "risk_score":           risk["risk_score"],
+        "risk_level":           risk["risk_level"],
+        "risk_factors":         " | ".join(risk["risk_factors"]),
     })
 
 
@@ -285,7 +317,7 @@ RISK_COLORS = {
     "NONE":     "#888780",
 }
 
-def visualize_spill_analysis(mask_2d, features, risk, title="Predicted Spill Mask", save_path=None):
+def visualize_spill_analysis(mask_2d, features, land_info, risk, title="Predicted Spill Mask", save_path=None):
     base      = (mask_2d > 0.5).astype(np.uint8) * 255
     image_rgb = np.stack([base, base, base], axis=-1)
 
@@ -293,16 +325,14 @@ def visualize_spill_analysis(mask_2d, features, risk, title="Predicted Spill Mas
 
     risk_color = RISK_COLORS.get(risk["risk_level"], "#888780")
     fig.suptitle(
-        f"{title}    |    Risk: {risk['risk_level']}  ({risk['risk_score']}/100)",
+        f"{title}    |    Risk: {risk['risk_level']} ({risk['risk_score']}/100)",
         fontsize=13, fontweight="bold", color=risk_color
     )
 
-    # Panel 1: predicted mask
     axes[0].imshow(mask_2d, cmap="gray")
     axes[0].set_title("Predicted mask")
     axes[0].axis("off")
 
-    # Panel 2: overlay + bbox + centroid
     overlay = image_rgb.copy()
     overlay[mask_2d > 0.5] = [255, 80, 40]
     axes[1].imshow(overlay)
@@ -320,7 +350,6 @@ def visualize_spill_analysis(mask_2d, features, risk, title="Predicted Spill Mas
     axes[1].set_title(f"Overlay | {features['num_components']} component(s)")
     axes[1].axis("off")
 
-    # Panel 3: metrics + risk
     axes[2].axis("off")
     lines = [
         f"Area:           {features['area_px']:,} px ({features['area_m2']} m²)",
@@ -335,21 +364,23 @@ def visualize_spill_analysis(mask_2d, features, risk, title="Predicted Spill Mas
         f"Max intensity:  {features['max_intensity']}",
         f"Std intensity:  {features['std_intensity']}",
         f"Density score:  {features['density_score']}",
+        f"Distance land:  {land_info['distance_to_land_km']} km",
+        f"Land class:     {land_info['land_proximity_class']}",
         f"──────────────────────────",
         f"Risk score:     {risk['risk_score']} / 100",
         f"Risk level:     {risk['risk_level']}",
     ]
 
     for i, line in enumerate(lines):
-        color = risk_color if i >= 13 else "black"
+        color = risk_color if i >= 15 else "black"
         axes[2].text(
-            0.05, 0.97 - i * 0.063, line,
+            0.05, 0.97 - i * 0.058, line,
             transform=axes[2].transAxes,
             fontsize=9.5, fontfamily="monospace",
             verticalalignment="top", color=color
         )
 
-    axes[2].set_title("Extracted features + Risk")
+    axes[2].set_title("Extracted features + Land proximity + Risk")
 
     plt.tight_layout()
     if save_path:
@@ -379,11 +410,11 @@ with open(CSV_PATH, "w", newline="", encoding="utf-8") as csvfile:
         print(f"Sample {idx}: {mask_path.name}")
         print(f"{'='*60}")
 
-        mask     = read_mask(mask_path)
-        features = analyze_spill(mask, pixel_size_m=PIXEL_SIZE_M)
-        risk     = compute_risk(features)
+        mask      = read_mask(mask_path)
+        features  = analyze_spill(mask, pixel_size_m=PIXEL_SIZE_M)
+        land_info = get_land_proximity(mask_path.name)
+        risk      = compute_risk(features)
 
-        # طباعة النتائج
         for k, v in features.items():
             if k == "contours":
                 print(f"  {'contours':<20}: {len(v)} contour(s)")
@@ -394,19 +425,21 @@ with open(CSV_PATH, "w", newline="", encoding="utf-8") as csvfile:
             else:
                 print(f"  {k:<20}: {v}")
 
+        print(f"  {'distance_to_land_m':<20}: {land_info['distance_to_land_m']}")
+        print(f"  {'distance_to_land_km':<20}: {land_info['distance_to_land_km']}")
+        print(f"  {'land_proximity_class':<20}: {land_info['land_proximity_class']}")
+
         print(f"\n  Risk Score : {risk['risk_score']} / 100")
         print(f"  Risk Level : {risk['risk_level']}")
         print(f"  Risk Factors:")
         for factor in risk["risk_factors"]:
             print(f"    • {factor}")
 
-        # حفظ في CSV
-        write_csv_row(writer, mask_path.name, features, risk)
+        write_csv_row(writer, mask_path.name, features, land_info, risk)
 
-        # رسم وحفظ
         out_file = OUTPUT_DIR / f"{mask_path.stem}_report.png"
         visualize_spill_analysis(
-            mask, features, risk,
+            mask, features, land_info, risk,
             title=f"Spill Analysis - {mask_path.name}",
             save_path=out_file
         )
