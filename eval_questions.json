@@ -1,0 +1,1131 @@
+[
+  {
+    "question": "What are the five main physical properties that affect the behaviour and persistence of an oil spilled at sea?",
+    "ground_truth": "The five main physical properties are: specific gravity, distillation characteristics, vapour pressure, viscosity, and pour point.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "EN_PDF_001",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What is the formula for converting specific gravity to °API gravity?",
+    "ground_truth": "°API = (141.5 / specific gravity) - 131.5",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_002",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What is the typical specific gravity of seawater used as a reference in oil-spill analysis?",
+    "ground_truth": "Seawater typically has a specific gravity of about 1.025.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "EN_PDF_003",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What vapour pressure threshold is required for evaporation of an oil to occur under most conditions?",
+    "ground_truth": "A vapour pressure greater than 3 kPa (23 mmHg) is required for evaporation to occur under most conditions.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_004",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "Define 'pour point' of an oil.",
+    "ground_truth": "The pour point is the temperature below which an oil no longer flows; it is a function of the oil's wax and asphaltene content.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "EN_PDF_005",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What is the typical escape velocity for most conventional containment booms?",
+    "ground_truth": "The escape velocity for most booms is around 0.35 m/s (0.7 knots), and most conventional booms cannot contain oil against water velocities much in excess of 0.5 m/s (1 knot) acting at right angles to the boom.",
+    "expected_sources": [
+      "TIP_3_Use_of_Booms_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_006",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What are the two broad design categories that the majority of boom designs fall into?",
+    "ground_truth": "Curtain booms and fence booms.",
+    "expected_sources": [
+      "TIP_3_Use_of_Booms_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "EN_PDF_007",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "Name the six main boom-failure modes.",
+    "ground_truth": "Entrainment, drainage failure, critical accumulation, splash-over, submergence, and planing.",
+    "expected_sources": [
+      "TIP_3_Use_of_Booms_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_008",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What is a shore-sealing (beach-sealing) boom designed to do?",
+    "ground_truth": "It is a boom whose skirt is replaced by water-filled chambers, allowing the boom to settle on an exposed shoreline at low tide and form a seal with the substrate.",
+    "expected_sources": [
+      "TIP_3_Use_of_Booms_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_009",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What is the target droplet size range for an effective chemical dispersion of oil?",
+    "ground_truth": "Oil droplet size must be in the range of 1 µm to 70 µm, with the most stable size being less than 45 µm.",
+    "expected_sources": [
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_010",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What are the two functions of the solvent in a dispersant formulation?",
+    "ground_truth": "The solvent acts as a 'thinner' reducing the viscosity of the surfactant so it can be sprayed, and it promotes the penetration of the surfactant into the oil slick.",
+    "expected_sources": [
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_011",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "How are dispersants classified into Type I, Type II, and Type III?",
+    "ground_truth": "Type I (second generation) dispersants are hydrocarbon-solvent based with 15-25% surfactant, applied undiluted at high dose rate (1:1 to 1:3). Type II are third-generation concentrates usually diluted with seawater (~10%) and used at 2:1 to 1:5 ratio, mainly from vessels. Type III are third-generation concentrates used neat at 1:5 to 1:50 dispersant-to-oil ratio, developed primarily for aircraft application.",
+    "expected_sources": [
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf"
+    ],
+    "difficulty": "hard",
+    "question_id": "EN_PDF_012",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "Why is biodegradation of oil enhanced after chemical dispersion?",
+    "ground_truth": "Dispersion produces many smaller droplets, greatly increasing the surface area available for biodegradation by marine micro-organisms (e.g., a 1 mm droplet split into 10,000 droplets of 45 µm gives 20× the surface area).",
+    "expected_sources": [
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_013",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What are the four main oil-recovery mechanisms used in skimmer designs?",
+    "ground_truth": "Oleophilic systems (adhesion to a moving surface), suction systems, weir systems relying on gravity, and mechanical lifting systems using scoops, belts or grabs.",
+    "expected_sources": [
+      "TIP_5_Use_of_Skimmers_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_014",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What shapes can the surface of an oleophilic skimmer take?",
+    "ground_truth": "Disc, drum, belt, brush, or rope-mop.",
+    "expected_sources": [
+      "TIP_5_Use_of_Skimmers_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "EN_PDF_015",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "Why might refined petroleum products like petrol or kerosene be unlikely to persist when spilt on water?",
+    "ground_truth": "They are relatively volatile and have rapid spreading and high evaporation rates, so they generally do not persist.",
+    "expected_sources": [
+      "TIP_6_Recognition_of_Oil_on_Shorelines.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "EN_PDF_016",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What gives some non-mineral (animal/vegetable) oils a distinctive appearance on shorelines?",
+    "ground_truth": "They may have characteristic rancid smells distinct from petroleum and can be translucent, white, or vivid yellow/red in appearance, depending on the extent of processing.",
+    "expected_sources": [
+      "TIP_6_Recognition_of_Oil_on_Shorelines.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_017",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What are the three stages of shoreline clean-up?",
+    "ground_truth": "Stage 1 – Emergency phase: collection of oil floating close to the shoreline and pooled bulk oil ashore. Stage 2 – Project phase: removal of stranded oil and oiled shoreline material. Stage 3 – Polishing phase: final clean-up of light contamination and removal of oil stains.",
+    "expected_sources": [
+      "TIP_7_Clean-up_of_Oil_From_Shorelines.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "EN_PDF_018",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "Why should the clean-up technique that minimises waste generation generally be preferred on shorelines?",
+    "ground_truth": "Because waste treatment and disposal of collected material is the most costly and time-consuming component of the overall response; minimising waste reduces storage, transport, and disposal needs and also reduces the potential for shoreline erosion.",
+    "expected_sources": [
+      "TIP_7_Clean-up_of_Oil_From_Shorelines.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_019",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "Why are caged or cultivated marine animals typically more at risk from oil spills than free-swimming wild fish?",
+    "ground_truth": "Caged animals and seafood products cultivated in fixed locations cannot avoid exposure to oil contaminants in the surrounding water, whereas free-swimming wild stocks can move away and oil concentrations in the water column decline rapidly after a spill.",
+    "expected_sources": [
+      "TIP_11_Effects_of_Oil_Pollution_on_Fisheries_and_Mariculture.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_020",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "How can clean-up operations themselves harm fisheries and mariculture?",
+    "ground_truth": "Aggressive or inappropriate clean-up techniques such as indiscriminate washing with high-pressure or hot water can adversely affect commercially exploited species and delay natural recovery, and nearby dispersant use can taint species through suspended oil droplets in the water column.",
+    "expected_sources": [
+      "TIP_11_Effects_of_Oil_Pollution_on_Fisheries_and_Mariculture.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_021",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What two main mechanisms cause damage to marine organisms from an oil spill?",
+    "ground_truth": "Physical smothering (affecting physiological functions) and toxicity (chemical effects on organisms). Indirect effects such as loss of habitat or shelter and elimination of ecologically important species are also recognised.",
+    "expected_sources": [
+      "TIP_13_Effects_of_Oil_Pollution_on_the_Marine_Environment.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_022",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "Which shoreline habitats typically receive a high sensitivity index in sensitivity atlases, and which receive a low index?",
+    "ground_truth": "Mangrove forests and saltmarshes are accorded a high sensitivity index, while sandy beaches generally feature at a low index.",
+    "expected_sources": [
+      "TIP_13_Effects_of_Oil_Pollution_on_the_Marine_Environment.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_023",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "List three typical objectives of a post-spill monitoring programme.",
+    "ground_truth": "Examples include: authenticating the origin of the oil pollution; establishing the risk of transfer of contaminants to the human food chain; ascertaining the effects of pollution on commercial fish/shellfish; verifying cause and effect; measuring hydrocarbon concentrations in sediment or water; monitoring the decline of hydrocarbons and recovery; identifying conditions for restoration; demonstrating return to background levels; or addressing regulatory requirements such as bathing-water standards.",
+    "expected_sources": [
+      "TIP_14_Sampling_and_Monitoring_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_024",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What three complementary approaches can be used in oil-spill monitoring programmes?",
+    "ground_truth": "Comparison of post-spill and pre-spill data; comparison of data from contaminated areas with un-contaminated reference sites; and monitoring changes over a period of time.",
+    "expected_sources": [
+      "TIP_14_Sampling_and_Monitoring_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_025",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "Approximately how fast do individual corals and overall coral reefs grow?",
+    "ground_truth": "Individual corals grow in the order of centimetres per year, while the overall growth of a coral reef is typically in the order of millimetres per year.",
+    "expected_sources": [
+      "TIP_18_2021_FINAL_Red.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "EN_PDF_026",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What kinds of physical damage typically occur when a vessel grounds on a coral reef?",
+    "ground_truth": "Dislodgement of corals, pulverisation of coral skeletons, removal of the reef surface and structural damage to the reef framework, leading to loss of three-dimensional complexity.",
+    "expected_sources": [
+      "TIP_18_2021_FINAL_Red.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_027",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What is the primary purpose of aerial surveillance of marine oil spills?",
+    "ground_truth": "Aerial surveillance is used to detect, monitor, and quantify oil at sea — providing information on the location, extent, distribution and movement of oil to guide response decisions, and to support recording and reporting.",
+    "expected_sources": [
+      "TIP_NO.1_Aerial_surveillance_of_marine_oil_spills.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "EN_PDF_028",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "Name three platforms or sensor categories covered under aerial surveillance of marine oil spills.",
+    "ground_truth": "Manned aircraft (with remote sensors), satellites (with remote sensing imagery), and unmanned aircraft (drones/UAVs) with their respective sensors.",
+    "expected_sources": [
+      "TIP_NO.1_Aerial_surveillance_of_marine_oil_spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_029",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "What weathering processes act on a spilled oil at sea?",
+    "ground_truth": "Spreading, evaporation, dispersion, emulsification, dissolution, oxidation (photo-oxidation), sedimentation/sinking, biodegradation, and (in cold environments) interaction with ice.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "EN_PDF_030",
+    "language": "en",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما هي الخصائص الفيزيائية الرئيسية التي تؤثر على سلوك واستمرار النفط المنسكب في البحر؟",
+    "ground_truth": "الكثافة النوعية، خصائص التقطير، ضغط البخار، اللزوجة، ونقطة الانسكاب (pour point).",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "AR_PDF_001",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما هي قيمة الكثافة النوعية لمياه البحر التي تُستخدم كمرجع في تحليل التسربات النفطية؟",
+    "ground_truth": "حوالي 1.025.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "AR_PDF_002",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما تعريف نقطة الانسكاب (pour point) للنفط؟",
+    "ground_truth": "هي درجة الحرارة التي يتوقف عندها النفط عن التدفق، وتعتمد على محتوى الشمع والأسفلتين في النفط.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "AR_PDF_003",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما هو الحد الأدنى لضغط البخار اللازم لحدوث التبخر للنفط في معظم الظروف؟",
+    "ground_truth": "أعلى من 3 كيلوباسكال (23 ملم زئبق).",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_004",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما العلاقة بين درجة الـ API العالية ولزوجة النفط؟",
+    "ground_truth": "النفط ذو الكثافة النوعية المنخفضة (API عالٍ) يحتوي عادةً على نسبة عالية من المركبات المتطايرة ويميل إلى أن يكون منخفض اللزوجة.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_005",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما السرعة التقريبية لتدفق المياه التي لا تستطيع الحواجز (booms) التقليدية احتواء النفط عند تجاوزها؟",
+    "ground_truth": "حوالي 0.5 م/ث (1 عقدة) عند التيار العمودي على الحاجز؛ وسرعة الإفلات النموذجية لمعظم الحواجز حوالي 0.35 م/ث (0.7 عقدة).",
+    "expected_sources": [
+      "TIP_3_Use_of_Booms_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_006",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "اذكر أوضاع فشل حواجز احتواء النفط الستة.",
+    "ground_truth": "الاستدراج (entrainment)، فشل التصريف (drainage failure)، التراكم الحرج (critical accumulation)، التطاير فوق الحاجز (splash-over)، الغمر (submergence)، والانزلاق (planing).",
+    "expected_sources": [
+      "TIP_3_Use_of_Booms_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_007",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما الفرق بين الحاجز الستائري (curtain boom) والحاجز السياجي (fence boom)؟",
+    "ground_truth": "الحاجز الستائري له تنورة مرنة تتدلى تحت الماء، أما الحاجز السياجي فله مقطع مسطح يُحفظ عمودياً في الماء عن طريق الطفو الداخلي أو الخارجي مع ثقالة ودعامات.",
+    "expected_sources": [
+      "TIP_3_Use_of_Booms_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_008",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما وظيفة حواجز الإغلاق الشاطئي (shore-sealing booms)؟",
+    "ground_truth": "تحتوي على غرف مملوءة بالماء بدلاً من التنورة، مما يسمح للحاجز بالاستقرار على الشاطئ المكشوف عند انخفاض المد وتشكيل غلق محكم مع الأرضية.",
+    "expected_sources": [
+      "TIP_3_Use_of_Booms_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_009",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما المدى المستهدف لحجم قطرات النفط لتحقيق تشتت كيميائي فعّال؟",
+    "ground_truth": "من 1 إلى 70 ميكرومتر، والحجم الأكثر استقراراً أقل من 45 ميكرومتر.",
+    "expected_sources": [
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_010",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما الوظيفتان الرئيسيتان للمذيب (solvent) في تركيبة المشتت (dispersant)؟",
+    "ground_truth": "1) تخفيف لزوجة الفاعل بالسطح ليصبح قابلاً للرش؛ 2) تعزيز اختراق الفاعل بالسطح لطبقة النفط.",
+    "expected_sources": [
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_011",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما الفرق بين مشتتات النوع II ومشتتات النوع III؟",
+    "ground_truth": "النوع II مركز يخفف عادةً بمياه البحر (~10%) قبل الاستخدام، ويحتاج جرعة عالية (2:1 إلى 1:5)، ويُطبَّق من السفن. النوع III يُستخدم خالصاً (neat) بنسبة 1:5 إلى 1:50، طُوِّر أساساً للتطبيق من الطائرات لكنه يصلح للسفن أيضاً، وهو الأكثر شيوعاً اليوم.",
+    "expected_sources": [
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf"
+    ],
+    "difficulty": "hard",
+    "question_id": "AR_PDF_012",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "لماذا تزيد المشتتات الكيميائية من معدل التحلل الحيوي للنفط؟",
+    "ground_truth": "لأنها تنتج عدداً كبيراً من القطرات الصغيرة، مما يزيد المساحة السطحية للنفط بشكل كبير ويوفر مساحة أكبر لنشاط الكائنات الدقيقة البحرية المحللة.",
+    "expected_sources": [
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_013",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما الآليات الأربع لاسترداد النفط في تصاميم القاشطات (skimmers)؟",
+    "ground_truth": "الأنظمة الزيتية (oleophilic) القائمة على الالتصاق، أنظمة الشفط (suction)، أنظمة السد (weir) القائمة على الجاذبية، والأنظمة الميكانيكية التي ترفع النفط عبر مغارف أو أحزمة أو قابضات.",
+    "expected_sources": [
+      "TIP_5_Use_of_Skimmers_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_014",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما الأشكال المختلفة للسطح الزيتي (oleophilic surface) في القاشطات؟",
+    "ground_truth": "أقراص (discs)، أسطوانات (drums)، أحزمة (belts)، فُرَش (brushes)، أو حبال ممسحة (rope-mops).",
+    "expected_sources": [
+      "TIP_5_Use_of_Skimmers_in_Oil_Pollution_Response.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "AR_PDF_015",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "لماذا لا تستمر منتجات البترول المكررة الخفيفة كالبنزين والكيروسين طويلاً عند انسكابها على الماء؟",
+    "ground_truth": "لأنها متطايرة نسبياً وتنتشر بسرعة ومعدل تبخرها مرتفع.",
+    "expected_sources": [
+      "TIP_6_Recognition_of_Oil_on_Shorelines.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "AR_PDF_016",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "كيف يمكن التمييز بين الزيوت غير المعدنية (حيوانية/نباتية) والزيوت البترولية على الشواطئ؟",
+    "ground_truth": "الزيوت غير المعدنية قد يكون لها روائح زنخة مميزة تختلف عن البترول، وقد تكون شفافة أو بيضاء أو ذات لون أصفر/أحمر زاهٍ، بحسب درجة المعالجة.",
+    "expected_sources": [
+      "TIP_6_Recognition_of_Oil_on_Shorelines.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_017",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما المراحل الثلاث الرئيسية لتنظيف النفط من الشواطئ؟",
+    "ground_truth": "المرحلة 1 (الطوارئ): جمع النفط الطافي قرب الشاطئ والنفط المتجمع بكثافة. المرحلة 2 (المشروع): إزالة النفط العالق ومواد الشاطئ الملوثة. المرحلة 3 (الصقل): التنظيف النهائي للتلوث الخفيف وإزالة البقع.",
+    "expected_sources": [
+      "TIP_7_Clean-up_of_Oil_From_Shorelines.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "AR_PDF_018",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "لماذا يُفضَّل اختيار تقنية التنظيف التي تنتج أقل قدر من النفايات؟",
+    "ground_truth": "لأن معالجة النفايات والتخلص منها هي الجزء الأكثر تكلفة واستهلاكاً للوقت في الاستجابة الإجمالية، وتقليلها يقلل من احتياجات التخزين والنقل والمعالجة النهائية ويقلل أيضاً من احتمال تآكل الشاطئ.",
+    "expected_sources": [
+      "TIP_7_Clean-up_of_Oil_From_Shorelines.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_019",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "لماذا تكون الأنواع البحرية المستزرعة في مواقع ثابتة أكثر عرضة للتأثر بالتسربات النفطية مقارنة بالأسماك البرية؟",
+    "ground_truth": "لأنها لا تستطيع الهروب أو تجنب التعرض للنفط، بينما تتراجع تركيزات النفط في عمود الماء بسرعة وتستطيع الأسماك البرية الابتعاد عن منطقة التسرب.",
+    "expected_sources": [
+      "TIP_11_Effects_of_Oil_Pollution_on_Fisheries_and_Mariculture.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_020",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "كيف يمكن أن تتسبب عمليات تنظيف النفط نفسها في إلحاق ضرر بمصائد الأسماك والاستزراع البحري؟",
+    "ground_truth": "تقنيات التنظيف الجارحة كالغسل بضغط عالٍ أو ماء ساخن يمكن أن تضر بالأنواع المستغلة تجارياً وتؤخر التعافي الطبيعي، كما أن استخدام المشتتات قرب المزارع قد يلوث الكائنات بقطرات النفط في عمود الماء.",
+    "expected_sources": [
+      "TIP_11_Effects_of_Oil_Pollution_on_Fisheries_and_Mariculture.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_021",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما الآليات الرئيسية التي يلحق بها التسرب النفطي الضرر بالكائنات البحرية؟",
+    "ground_truth": "الخنق الفيزيائي (smothering) المؤثر على الوظائف الفسيولوجية، والسمية الكيميائية، إضافة إلى التأثيرات غير المباشرة كفقدان الموائل أو الملاجئ وتغير تركيبة المجتمعات.",
+    "expected_sources": [
+      "TIP_13_Effects_of_Oil_Pollution_on_the_Marine_Environment.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_022",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "أي الموائل الساحلية تُعطى عادةً مؤشر حساسية مرتفع في خرائط الحساسية البيئية؟",
+    "ground_truth": "غابات المنغروف والمسطحات الملحية (saltmarshes) تُعطى مؤشر حساسية مرتفع، بينما الشواطئ الرملية عادةً تأخذ مؤشراً منخفضاً.",
+    "expected_sources": [
+      "TIP_13_Effects_of_Oil_Pollution_on_the_Marine_Environment.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_023",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "اذكر ثلاثة أهداف نموذجية لبرنامج المراقبة بعد التسرب النفطي.",
+    "ground_truth": "أمثلة: التحقق من مصدر التلوث، تقييم خطر انتقال الملوثات إلى السلسلة الغذائية البشرية، تقدير تأثير التلوث على الأسماك التجارية، قياس تراكيز الهيدروكربونات في الرواسب أو الماء، رصد عودة الوضع إلى مستويات الخلفية، وتلبية المتطلبات التنظيمية مثل معايير مياه السباحة.",
+    "expected_sources": [
+      "TIP_14_Sampling_and_Monitoring_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_024",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما المقاربات الثلاث التكميلية لتصميم برامج المراقبة بعد التسربات النفطية؟",
+    "ground_truth": "مقارنة بيانات ما بعد التسرب مع بيانات ما قبله، مقارنة بيانات المناطق الملوثة بمواقع مرجعية غير ملوثة، ورصد التغيرات على مدى فترة زمنية.",
+    "expected_sources": [
+      "TIP_14_Sampling_and_Monitoring_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_025",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما المعدل التقريبي لنمو الشعاب المرجانية الفردية والشعاب الكلية؟",
+    "ground_truth": "الشعاب الفردية تنمو بمعدل سنتيمترات في السنة، أما الشعاب المرجانية ككل فتنمو بمعدل ملليمترات في السنة.",
+    "expected_sources": [
+      "TIP_18_2021_FINAL_Red.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "AR_PDF_026",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما أنواع الضرر الفيزيائي الذي يلحقه جنوح سفينة بشعبة مرجانية؟",
+    "ground_truth": "خلع المرجان، تكسير الهياكل الكلسية المرجانية، إزالة سطح الشعبة، وإلحاق ضرر هيكلي بإطار الشعبة، مما يؤدي إلى فقدان التعقيد ثلاثي الأبعاد.",
+    "expected_sources": [
+      "TIP_18_2021_FINAL_Red.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_027",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما الغرض الأساسي من المراقبة الجوية للتسربات النفطية البحرية؟",
+    "ground_truth": "اكتشاف ومراقبة وتقدير حجم النفط في البحر، وتوفير معلومات حول موقعه ومدى انتشاره وحركته لدعم اتخاذ قرارات الاستجابة وإعداد التقارير.",
+    "expected_sources": [
+      "TIP_NO.1_Aerial_surveillance_of_marine_oil_spills.pdf"
+    ],
+    "difficulty": "easy",
+    "question_id": "AR_PDF_028",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "اذكر ثلاث منصات أو فئات استشعار تُغطى في المراقبة الجوية للتسربات النفطية.",
+    "ground_truth": "الطائرات المأهولة بمستشعرات بعدية، الأقمار الصناعية بصور الاستشعار عن بُعد، والطائرات بدون طيار (UAVs) بمستشعراتها المختلفة.",
+    "expected_sources": [
+      "TIP_NO.1_Aerial_surveillance_of_marine_oil_spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_029",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "ما العمليات الرئيسية للتجوية (weathering) التي تحدث للنفط المنسكب في البحر؟",
+    "ground_truth": "الانتشار، التبخر، التشتت، الاستحلاب، الذوبان، الأكسدة الضوئية، الترسب، التحلل الحيوي، وتفاعل النفط مع الجليد في البيئات الباردة.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf"
+    ],
+    "difficulty": "medium",
+    "question_id": "AR_PDF_030",
+    "language": "ar",
+    "type": "direct_retrieval"
+  },
+  {
+    "question": "How many oil spill records are in the spill analysis dataset?",
+    "ground_truth": "1200 records.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "easy",
+    "question_id": "CSV_001",
+    "type": "csv"
+  },
+  {
+    "question": "ما العدد الإجمالي لسجلات تحليل التسربات النفطية في مجموعة البيانات؟",
+    "ground_truth": "1200 سجلاً.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "ar",
+    "difficulty": "easy",
+    "question_id": "CSV_002",
+    "type": "csv"
+  },
+  {
+    "question": "What is the distribution of risk levels across all spill records?",
+    "ground_truth": "HIGH: 859, MEDIUM: 272, CRITICAL: 48, LOW: 21.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "medium",
+    "question_id": "CSV_003",
+    "type": "csv"
+  },
+  {
+    "question": "كم عدد التسربات المصنفة بمستوى خطر حرج (CRITICAL)؟",
+    "ground_truth": "48 تسرباً.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "ar",
+    "difficulty": "easy",
+    "question_id": "CSV_004",
+    "type": "csv"
+  },
+  {
+    "question": "Which spill record has the largest oil-covered area, and what is that area?",
+    "ground_truth": "Record 00053.tif has the largest area at 436,016 m² (coverage 41.58%), classified as CRITICAL.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "medium",
+    "question_id": "CSV_005",
+    "type": "csv"
+  },
+  {
+    "question": "ما هي قيمة risk_score القصوى المسجلة في الـ CSV؟",
+    "ground_truth": "100.0 (وُجدت في عدة سجلات مثل 00039.tif و 00040.tif و 00041.tif).",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "ar",
+    "difficulty": "medium",
+    "question_id": "CSV_006",
+    "type": "csv"
+  },
+  {
+    "question": "How many spill records are classified as 'Touches land'?",
+    "ground_truth": "26 records.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "easy",
+    "question_id": "CSV_007",
+    "type": "csv"
+  },
+  {
+    "question": "كم عدد التسربات التي تلامس الشعاب المرجانية مباشرة (Touches coral reef)؟",
+    "ground_truth": "7 تسربات.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "ar",
+    "difficulty": "easy",
+    "question_id": "CSV_008",
+    "type": "csv"
+  },
+  {
+    "question": "What is the average area (in m²) of oil spills in the dataset?",
+    "ground_truth": "Approximately 21,903 m² on average (median around 11,496 m²).",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "medium",
+    "question_id": "CSV_009",
+    "type": "csv"
+  },
+  {
+    "question": "How many spill records are classified as 'Very close' to land?",
+    "ground_truth": "5 records.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "easy",
+    "question_id": "CSV_010",
+    "type": "csv"
+  },
+  {
+    "question": "ما هي الفئات المستخدمة لتصنيف القرب من الشعاب المرجانية في الـ CSV؟",
+    "ground_truth": "Very close to coral، Close to coral، Far from coral، Very far from coral (>20 km)، وTouches coral reef.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "ar",
+    "difficulty": "medium",
+    "question_id": "CSV_011",
+    "type": "csv"
+  },
+  {
+    "question": "What are the main columns describing the geographic location of each oil spill?",
+    "ground_truth": "spill_centroid_lon, spill_centroid_lat, center_lon, center_lat, plus the four corner coordinates (upper_left_lon/lat, upper_right_lon/lat, lower_right_lon/lat, lower_left_lon/lat) and the bbox fields (bbox_left, bbox_bottom, bbox_right, bbox_top).",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "medium",
+    "question_id": "CSV_012",
+    "type": "csv"
+  },
+  {
+    "question": "ما المعنى من العمود coverage_pct في ملف تحليل التسربات؟",
+    "ground_truth": "النسبة المئوية لتغطية النفط في الصورة (مساحة التسرب نسبة إلى مساحة الصورة الكلية).",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "ar",
+    "difficulty": "medium",
+    "question_id": "CSV_013",
+    "type": "csv"
+  },
+  {
+    "question": "What does the 'risk_factors' field contain?",
+    "ground_truth": "A textual breakdown of how each criterion contributed to the risk score: coverage percentage, spread_ratio, number of components, density, distance to land, and distance to coral — each with its category (e.g., 'MINIMAL', 'MEDIUM', 'CRITICAL', 'LOW').",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "medium",
+    "question_id": "CSV_014",
+    "type": "csv"
+  },
+  {
+    "question": "How many records have a risk_score of exactly 100?",
+    "ground_truth": "Multiple records (at least 5 found, including 00039.tif, 00040.tif, 00041.tif, 00042.tif, 00043.tif) — all classified as CRITICAL with very close proximity to land.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "CSV_015",
+    "type": "csv"
+  },
+  {
+    "question": "ما هي الأعمدة في الملف التي تصف الخصائص الهندسية لشكل بقعة النفط؟",
+    "ground_truth": "area_px, area_m2, perimeter_px, perimeter_m, orientation_deg, spread_ratio, num_components, compactness, contours_count, centroid_x, centroid_y.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "ar",
+    "difficulty": "medium",
+    "question_id": "CSV_016",
+    "type": "csv"
+  },
+  {
+    "question": "Which proximity class is the most common for land in the dataset?",
+    "ground_truth": "'Very far (>20 km)' with 1092 records out of 1200.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "medium",
+    "question_id": "CSV_017",
+    "type": "csv"
+  },
+  {
+    "question": "ما عدد التسربات المصنفة كـ HIGH في مستوى الخطر؟",
+    "ground_truth": "859 تسرباً.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "ar",
+    "difficulty": "easy",
+    "question_id": "CSV_018",
+    "type": "csv"
+  },
+  {
+    "question": "What does 'spread_ratio' likely represent in the dataset?",
+    "ground_truth": "A measure of how elongated/spread out the oil slick is — the ratio of the major axis to the minor axis (or a similar shape metric). Higher values indicate more elongated spills.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "CSV_019",
+    "type": "csv"
+  },
+  {
+    "question": "ما الفرق بين distance_to_land_m و distance_to_land_km في الـ CSV؟",
+    "ground_truth": "نفس البيانات بوحدتين مختلفتين: distance_to_land_m بالمتر، و distance_to_land_km بالكيلومتر.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "ar",
+    "difficulty": "easy",
+    "question_id": "CSV_020",
+    "type": "csv"
+  },
+  {
+    "question": "What is the typical risk_level assigned to spills classified as 'Touches land'?",
+    "ground_truth": "Records that touch land tend to be classified as HIGH or CRITICAL because zero distance from land drives the risk score upward.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "CSV_021",
+    "type": "csv"
+  },
+  {
+    "question": "كم عدد الأعمدة (الميزات) في ملف تحليل التسربات؟",
+    "ground_truth": "58 عموداً.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "ar",
+    "difficulty": "easy",
+    "question_id": "CSV_022",
+    "type": "csv"
+  },
+  {
+    "question": "What are the fields that describe the pixel size and image dimensions for each spill?",
+    "ground_truth": "width, height, pixel_size_x, pixel_size_y.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "medium",
+    "question_id": "CSV_023",
+    "type": "csv"
+  },
+  {
+    "question": "ما هي الفئات المستخدمة لتصنيف مستوى الخطر في ملف التسربات؟",
+    "ground_truth": "أربع فئات: LOW، MEDIUM، HIGH، و CRITICAL.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "ar",
+    "difficulty": "easy",
+    "question_id": "CSV_024",
+    "type": "csv"
+  },
+  {
+    "question": "What is the maximum recorded area of a single spill in the dataset (m²)?",
+    "ground_truth": "Approximately 436,016 m² (record 00053.tif).",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv"
+    ],
+    "language": "en",
+    "difficulty": "medium",
+    "question_id": "CSV_025",
+    "type": "csv"
+  },
+  {
+    "question": "If a spill record in the dataset is classified as 'Touches coral reef', which TIP document would be most relevant for assessing ecological impact, and what main types of damage does it describe?",
+    "ground_truth": "TIP 18 (Ship Groundings on Coral Reefs) is most relevant; it describes physical damage (dislodgement of corals, pulverisation of skeletons, structural framework damage, loss of 3-D complexity) and biological damage (mortality or displacement of organisms), plus indirect damage from sediment smothering.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv",
+      "TIP_18_2021_FINAL_Red.pdf"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "MULTI_001",
+    "type": "multi_source"
+  },
+  {
+    "question": "إذا كان تسرب نفطي مصنف 'Touches land' في الـ CSV ووصل إلى شاطئ رملي، فما المرحلة الأولى للاستجابة وفقاً لـ TIP 7، وأي مستندات أخرى تساعد على تقييم التأثير؟",
+    "ground_truth": "وفقاً لـ TIP 7، المرحلة الأولى هي مرحلة الطوارئ: جمع النفط الطافي قرب الشاطئ والنفط المتراكم بكثافة لمنع انتشاره. كما يفيد TIP 6 في التعرف على نوع النفط على الشاطئ، و TIP 13 لتقييم التأثيرات البيئية، و TIP 11 إذا كانت هناك مصائد أسماك متأثرة.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv",
+      "TIP_7_Clean-up_of_Oil_From_Shorelines.pdf",
+      "TIP_6_Recognition_of_Oil_on_Shorelines.pdf",
+      "TIP_13_Effects_of_Oil_Pollution_on_the_Marine_Environment.pdf"
+    ],
+    "language": "ar",
+    "difficulty": "hard",
+    "question_id": "MULTI_002",
+    "type": "multi_source"
+  },
+  {
+    "question": "Compare how booms and dispersants are used in oil spill response: what conditions favour each, and what are the main limitations?",
+    "ground_truth": "Booms (TIP 3) are used for containment and recovery; they work in calm waters at currents below ~0.35–0.5 m/s, but fail at higher velocities through entrainment, drainage failure, splash-over, submergence, or planing. Dispersants (TIP 4) require minimum wave energy, are constrained by oil type/viscosity and weathering, and aim to break the slick into 1–70 µm droplets to enhance natural biodegradation. Booms are containment-focused, dispersants are removal-from-surface focused.",
+    "expected_sources": [
+      "TIP_3_Use_of_Booms_in_Oil_Pollution_Response.pdf",
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "MULTI_003",
+    "type": "multi_source"
+  },
+  {
+    "question": "كيف تتكامل عمليات المراقبة الجوية مع عمليات أخذ العينات والمراقبة البيئية في الاستجابة للتسربات النفطية؟",
+    "ground_truth": "وفقاً لـ TIP 1 توفر المراقبة الجوية معلومات عن موقع النفط ومدى انتشاره وحركته لتوجيه عمليات الاستجابة. أما TIP 14 فيوضح أن أخذ العينات والمراقبة البيئية يهدفان إلى التحقق من مصدر النفط، قياس تراكيز الهيدروكربونات، ومتابعة التعافي. المراقبة الجوية تحدد الأماكن والأولويات، بينما تقدم المراقبة البيئية القياس الكمي للتلوث والتأثيرات.",
+    "expected_sources": [
+      "TIP_NO.1_Aerial_surveillance_of_marine_oil_spills.pdf",
+      "TIP_14_Sampling_and_Monitoring_of_Marine_Oil_Spills.pdf"
+    ],
+    "language": "ar",
+    "difficulty": "hard",
+    "question_id": "MULTI_004",
+    "type": "multi_source"
+  },
+  {
+    "question": "How do oil properties (specific gravity, viscosity, pour point) affect both the choice of skimmer and the effectiveness of dispersants?",
+    "ground_truth": "Per TIP 2, oil properties dictate weathering and persistence. Per TIP 5, skimmer selection depends on oil viscosity and adhesive properties: oleophilic skimmers are most effective in medium-viscosity oils, while heavier oils may require mechanical lifting. Per TIP 4, dispersants are limited by oil viscosity (high-viscosity weathered or emulsified oils resist dispersion) and sea conditions. So both response tools are heavily dependent on the same physical oil properties described in TIP 2.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf",
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf",
+      "TIP_5_Use_of_Skimmers_in_Oil_Pollution_Response.pdf"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "MULTI_005",
+    "type": "multi_source"
+  },
+  {
+    "question": "بناءً على إحصائيات الـ CSV، ما النسبة المئوية للتسربات عالية الخطورة (HIGH أو CRITICAL)، وما تأثيراتها المحتملة على البيئة البحرية وفقاً لـ TIP 13؟",
+    "ground_truth": "النسبة: (859 HIGH + 48 CRITICAL) / 1200 = حوالي 75.6%. وفقاً لـ TIP 13 فإن التسربات الكبيرة من النفط المستمر قد تسبب أضراراً واسعة في المناطق المدية والشواطئ الحساسة كأشجار المنغروف والمسطحات الملحية، وتشمل التأثيرات الخنق الفيزيائي والسمية الكيميائية وفقدان الموائل.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv",
+      "TIP_13_Effects_of_Oil_Pollution_on_the_Marine_Environment.pdf"
+    ],
+    "language": "ar",
+    "difficulty": "hard",
+    "question_id": "MULTI_006",
+    "type": "multi_source"
+  },
+  {
+    "question": "For an oil spill that has weathered for several days and become heavily emulsified, which response options become less effective and which remain viable?",
+    "ground_truth": "Per TIP 2, weathering increases viscosity and water content (emulsification). Per TIP 4, dispersants become less effective on highly viscous emulsified oils. Per TIP 3, booms still work for containment but may face critical accumulation issues with thick oil. Per TIP 5, mechanical skimmers (especially rope-mop or drum/brush oleophilic skimmers) become more important for heavier weathered oils. Per TIP 7, once it reaches the shore, manual recovery and selective techniques dominate.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf",
+      "TIP_3_Use_of_Booms_in_Oil_Pollution_Response.pdf",
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf",
+      "TIP_5_Use_of_Skimmers_in_Oil_Pollution_Response.pdf"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "MULTI_007",
+    "type": "multi_source"
+  },
+  {
+    "question": "How can monitoring data (TIP 14) be combined with aerial surveillance (TIP 1) to evaluate damage to fisheries (TIP 11)?",
+    "ground_truth": "Aerial surveillance maps the extent and movement of oil; monitoring programs quantify hydrocarbon concentrations in water, sediment, and biota; together they identify which fisheries/mariculture areas were exposed and for how long, support fisheries-restriction decisions (a stated TIP 14 objective), and confirm when contaminants return to background levels so fishing can resume.",
+    "expected_sources": [
+      "TIP_NO.1_Aerial_surveillance_of_marine_oil_spills.pdf",
+      "TIP_14_Sampling_and_Monitoring_of_Marine_Oil_Spills.pdf",
+      "TIP_11_Effects_of_Oil_Pollution_on_Fisheries_and_Mariculture.pdf"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "MULTI_008",
+    "type": "multi_source"
+  },
+  {
+    "question": "في الـ CSV عدة تسربات قريبة جداً من الشعاب المرجانية. ما الاعتبارات الخاصة عند تنظيف التسربات قرب الشعاب وفقاً لـ TIP 18 و TIP 4؟",
+    "ground_truth": "وفقاً لـ TIP 18، الشعاب المرجانية بطيئة النمو جداً (ملليمترات/سنة للشعاب الكلية) وحساسة للتلوث والتدخل الميكانيكي. وفقاً لـ TIP 4، استخدام المشتتات قرب الشعاب قد يلوث الأنواع الحساسة عبر القطرات المعلقة في عمود الماء. لذلك يجب تجنب التقنيات العدوانية والاعتماد على أساليب أقل تدخلاً وحساب التوازن بين إزالة النفط وإلحاق ضرر إضافي.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv",
+      "TIP_18_2021_FINAL_Red.pdf",
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf"
+    ],
+    "language": "ar",
+    "difficulty": "hard",
+    "question_id": "MULTI_009",
+    "type": "multi_source"
+  },
+  {
+    "question": "What does an 'oleophilic' material mean in the context of skimmers, and how is the same surfactant principle of oil-water interaction inverted in dispersants?",
+    "ground_truth": "Per TIP 5, an oleophilic material has greater affinity for oil than water, so oil adheres to it for recovery. Per TIP 4, dispersant surfactants have BOTH an oleophilic (oil-attracted) part and a hydrophilic (water-attracted) part — they sit at the oil-water interface to reduce surface tension and break oil into droplets. So skimmers use pure oleophilic surfaces to keep oil together for recovery; dispersants use amphiphilic surfactants to split oil into droplets.",
+    "expected_sources": [
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf",
+      "TIP_5_Use_of_Skimmers_in_Oil_Pollution_Response.pdf"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "MULTI_010",
+    "type": "multi_source"
+  },
+  {
+    "question": "What is the relationship between the physical properties of an oil (TIP 2) and its visual recognition on a shoreline (TIP 6)?",
+    "ground_truth": "Per TIP 2, light volatile oils evaporate and spread quickly; heavier oils with high pour points form semi-solid fragments and persist longer. Per TIP 6, this directly affects recognition on shorelines: fresh fuel oil is black and liquid; emulsified crude appears deep orange/brown; weathered or wax-rich oils become non-sticky solids on sand; and very volatile products may leave little visible residue.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf",
+      "TIP_6_Recognition_of_Oil_on_Shorelines.pdf"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "MULTI_011",
+    "type": "multi_source"
+  },
+  {
+    "question": "أي مزيج من الأدوات يُنصح به للاستجابة لتسرب نفطي كبير (CRITICAL) قريب من الشاطئ بحسب TIPs المختلفة؟",
+    "ground_truth": "الاستجابة المتكاملة تشمل: مراقبة جوية (TIP 1) لتحديد الموقع والانتشار؛ وضع حواجز احتواء (TIP 3) لمنع التوسع، خاصة حواجز الإغلاق الشاطئي؛ استخدام قاشطات (TIP 5) لاستعادة النفط؛ تقييم استخدام المشتتات (TIP 4) إذا كانت ظروف البحر تسمح؛ تنظيف الشاطئ على مراحل (TIP 7)؛ وبرنامج مراقبة بيئية (TIP 14) لرصد الانتعاش وتقييم الأثر على الموائل الحساسة (TIP 13) والمصائد (TIP 11).",
+    "expected_sources": [
+      "TIP_NO.1_Aerial_surveillance_of_marine_oil_spills.pdf",
+      "TIP_3_Use_of_Booms_in_Oil_Pollution_Response.pdf",
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf",
+      "TIP_5_Use_of_Skimmers_in_Oil_Pollution_Response.pdf",
+      "TIP_7_Clean-up_of_Oil_From_Shorelines.pdf",
+      "TIP_14_Sampling_and_Monitoring_of_Marine_Oil_Spills.pdf"
+    ],
+    "language": "ar",
+    "difficulty": "hard",
+    "question_id": "MULTI_012",
+    "type": "multi_source"
+  },
+  {
+    "question": "Based on the CSV, what land_proximity_class would record 00053.tif fall under, and what TIP guidance applies to spills of that size at that distance from land?",
+    "ground_truth": "Record 00053.tif has area 436,016 m² (CRITICAL); its land_proximity_class can be checked in the row. For a CRITICAL-size spill far from land, TIP 2 (fate and weathering), TIP 1 (aerial surveillance to track movement), and TIP 4 (dispersants under suitable sea conditions) are most relevant. If it later approaches shore, TIP 3 (booms), TIP 5 (skimmers), and TIP 7 (shoreline clean-up) apply.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv",
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf",
+      "TIP_NO.1_Aerial_surveillance_of_marine_oil_spills.pdf",
+      "TIP_4_Use_of_Dispersants_to_Treat_Oil_Spills.pdf"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "MULTI_013",
+    "type": "multi_source"
+  },
+  {
+    "question": "كيف يمكن استخدام بيانات الـ CSV (مثل risk_score و coverage_pct) في توجيه قرارات التنظيف بناءً على إرشادات TIP 7؟",
+    "ground_truth": "بيانات الـ CSV تعطي تقدير كمي للحجم والخطر وقرب التسرب من الموارد الحساسة. وفقاً لـ TIP 7، التسربات ذات coverage_pct العالية و risk_score المرتفعة و'Touches land' تستدعي مرحلة 1 (طوارئ) فورية لجمع النفط الكثيف، بينما التسربات الصغيرة قد لا تحتاج كل المراحل. المعلومات تساعد أيضاً في اختيار التقنية المناسبة (يدوي vs ميكانيكي) وفق توجه TIP 7 بتقليل النفايات.",
+    "expected_sources": [
+      "spill_analysis_results_full_with_llm.csv",
+      "TIP_7_Clean-up_of_Oil_From_Shorelines.pdf"
+    ],
+    "language": "ar",
+    "difficulty": "hard",
+    "question_id": "MULTI_014",
+    "type": "multi_source"
+  },
+  {
+    "question": "What is the role of oil specific gravity in determining both fate and surveillance/recognition of marine oil spills?",
+    "ground_truth": "Per TIP 2, specific gravity (and °API) determines whether oil floats or sinks, indicates volatility (high API = volatile, low viscosity) and influences weathering rate. Per TIP 1 and TIP 6, this directly affects what aerial observers and shoreline responders see: light low-density oils give thin rainbow sheens and evaporate fast; heavier dense oils form thick dark slicks and may sink or form tar balls on shore, requiring different surveillance and recognition approaches.",
+    "expected_sources": [
+      "TIP_2_Fate_of_Marine_Oil_Spills.pdf",
+      "TIP_NO.1_Aerial_surveillance_of_marine_oil_spills.pdf",
+      "TIP_6_Recognition_of_Oil_on_Shorelines.pdf"
+    ],
+    "language": "en",
+    "difficulty": "hard",
+    "question_id": "MULTI_015",
+    "type": "multi_source"
+  }
+]

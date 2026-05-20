@@ -1,0 +1,153 @@
+# =========================
+# Secrets / Environment
+# =========================
+.env
+.env.*
+*.key
+*.pem
+*.secret
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# =========================
+# macOS / Editor
+# =========================
+.DS_Store
+.vscode/
+.idea/
+
+# =========================
+# Node / Frontend
+# =========================
+node_modules/
+dist/
+build/
+.vite/
+
+# =========================
+# Databases
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.sql
+*.backup
+postgres_data/
+pgdata/
+
+# =========================
+# Data / Datasets
+# =========================
+Oil/
+dataset/
+datasets/
+dataset_split/
+preprocessed_dataset/
+tif_patches_grayscale/
+masks/
+predicted_masks/
+full_pipeline_output/
+backend_uploads/
+uploads/
+data/
+raw_data/
+processed_data/
+hf_oil_spill_tokenized_dataset/
+
+# CSV outputs / large generated files
+*.csv
+*.jsonl
+*.parquet
+*.arrow
+*.pkl
+*.joblib
+
+# =========================
+# Models / Checkpoints
+# =========================
+*.keras
+*.h5
+*.hdf5
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.bin
+
+oil_llm_reporter/models/
+oil_qwen_lora_adapter/
+oil_llm_reporter/oil_qwen_lora_adapter/
+models/
+checkpoints/
+
+# =========================
+# RAG / Vector DB / Cache
+# =========================
+chroma/
+chromadb/
+vectorstore/
+external_rag/chroma/
+external_rag/chromadb/
+external_rag/rag_index/
+.cache/
+huggingface/
+.huggingface/
+
+# =========================
+# Generated reports / runtime outputs (لا ترفع على GitHub)
+# =========================
+final_html_reports/
+final_response_reports_150/
+reports_output/
+backend-rana-clean/generated_llm_reports/
+backend-rana-clean/generated_solution_reports/
+backend-rana-clean/generated_upload_spills/
+backend_model_outputs/
+*.jsonl
+LLM/
+"LLM/content 2/"
+
+# Extra data / generated outputs
+preprocessed_dataset/
+masks_fixed_v2/
+rag_db/
+rno/
+solution_reports_output/
+spill_reports_test/
+tif_patches_grayscale/
+ne_10m_land/
+*.aux.xml
+
+# Ignore data / generated / large files
+preprocessed_dataset/
+masks_fixed_v2/
+rag_db/
+rno/
+solution_reports_output/
+spill_reports_test/
+tif_patches_grayscale/
+ne_10m_land/
+*.aux.xml
+*.keras
+*.safetensors
+*.h5
+*.db
+*.sqlite
+*.sqlite3

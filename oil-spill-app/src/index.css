@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 218 70% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 70% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 70% 14%;
+
+    --primary: 218 70% 14%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 35% 95%;
+    --secondary-foreground: 218 70% 14%;
+
+    --muted: 210 30% 94%;
+    --muted-foreground: 218 20% 45%;
+
+    --accent: 180 82% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 218 20% 90%;
+    --input: 218 20% 90%;
+    --ring: 180 82% 35%;
+
+    --radius: 0.875rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+  }
+
+  html[dir="rtl"] body {
+    @apply font-arabic;
+  }
+
+  ::selection {
+    @apply bg-teal-200 text-navy-700;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ocean-200 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-ocean-300;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_-12px_rgba(11,30,63,0.12)];
+  }
+
+  .gradient-mesh {
+    background-image:
+      radial-gradient(at 12% 8%, rgba(15, 164, 164, 0.18) 0px, transparent 50%),
+      radial-gradient(at 88% 14%, rgba(64, 151, 190, 0.22) 0px, transparent 50%),
+      radial-gradient(at 50% 90%, rgba(11, 30, 63, 0.08) 0px, transparent 50%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .display-font {
+    font-family: "Manrope", "Inter", system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  /* Risk pill colors */
+  .risk-nospill {
+    @apply bg-slate-100 text-slate-600 border-slate-200;
+  }
+  .risk-low {
+    @apply bg-emerald-100 text-emerald-700 border-emerald-200;
+  }
+  .risk-medium {
+    @apply bg-amber-100 text-amber-700 border-amber-200;
+  }
+  .risk-high {
+    @apply bg-red-100 text-red-700 border-red-200;
+  }
+
+  /* Marker pulse */
+  .marker-pulse::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 9999px;
+    opacity: 0.45;
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  .marker-pulse.crit::before { background: rgba(239, 68, 68, 0.45); }
+  .marker-pulse.hi::before { background: rgba(249, 115, 22, 0.45); }
+  .marker-pulse.med::before { background: rgba(245, 158, 11, 0.4); }
+  .marker-pulse.lo::before { background: rgba(16, 185, 129, 0.4); }
+
+  @keyframes ping {
+    75%, 100% { transform: scale(2); opacity: 0; }
+  }
+
+  .shimmer-bg {
+    background: linear-gradient(
+      110deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.6) 50%,
+      transparent 70%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+
+  /* Leaflet override */
+  .leaflet-container {
+    @apply rounded-2xl;
+    font-family: inherit;
+    background: #e6f0f4;
+  }
+  .leaflet-popup-content-wrapper {
+    @apply rounded-xl shadow-xl border border-ocean-100;
+    padding: 0;
+  }
+  .leaflet-popup-content {
+    margin: 0 !important;
+    width: 280px !important;
+  }
+  .leaflet-popup-tip {
+    background: white;
+  }
+
+  /* Animated dots */
+  .typing-dots span {
+    @apply inline-block w-1.5 h-1.5 mx-0.5 rounded-full bg-teal-500;
+    animation: typing 1.4s infinite ease-in-out both;
+  }
+  .typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+  .typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+  @keyframes typing {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1); opacity: 1; }
+  }
+
+  /* Sea wave slides for the home hero */
+  .wave-slide-1 {
+    animation: waveSlide 18s linear infinite;
+  }
+  .wave-slide-2 {
+    animation: waveSlide 26s linear infinite;
+    animation-delay: -8s;
+  }
+  .wave-slide-3 {
+    animation: waveSlide 34s linear infinite;
+    animation-delay: -14s;
+  }
+  @keyframes waveSlide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { scrollbar-width: none; }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(11, 30, 63, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(11, 30, 63, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .bg-grid-dense {
+    background-image:
+      linear-gradient(to right, rgba(15, 164, 164, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 164, 164, 0.08) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+}
+
+
+/* Leaflet map fix */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.leaflet-container .leaflet-pane,
+.leaflet-container .leaflet-map-pane,
+.leaflet-container .leaflet-tile-pane,
+.leaflet-container .leaflet-overlay-pane,
+.leaflet-container .leaflet-shadow-pane,
+.leaflet-container .leaflet-marker-pane,
+.leaflet-container .leaflet-tooltip-pane,
+.leaflet-container .leaflet-popup-pane,
+.leaflet-container .leaflet-tile-container,
+.leaflet-container .leaflet-layer,
+.leaflet-container .leaflet-pane > svg,
+.leaflet-container .leaflet-pane > canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.leaflet-container .leaflet-tile,
+.leaflet-container .leaflet-marker-icon,
+.leaflet-container .leaflet-marker-shadow {
+  position: absolute;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.leaflet-container .leaflet-tile {
+  width: 256px !important;
+  height: 256px !important;
+}
+
+/* Arabic hero font fix */
+html[dir="rtl"] .display-font {
+  font-family: "Cairo", "Tajawal", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] h1.display-font {
+  line-height: 1.28;
+}
+

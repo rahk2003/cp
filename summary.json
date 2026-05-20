@@ -1,0 +1,55 @@
+{
+  "overall": {
+    "hit_rate@k": 0.92,
+    "reciprocal_rank": 0.8244166666666666,
+    "source_recall@k": 0.8716666666666668
+  },
+  "by_language": {
+    "ar": {
+      "hit_rate@k": 0.8936,
+      "reciprocal_rank": 0.7392,
+      "source_recall@k": 0.8404
+    },
+    "en": {
+      "hit_rate@k": 0.9434,
+      "reciprocal_rank": 0.9,
+      "source_recall@k": 0.8994
+    }
+  },
+  "by_type": {
+    "csv": {
+      "hit_rate@k": 0.72,
+      "reciprocal_rank": 0.6333,
+      "source_recall@k": 0.72
+    },
+    "direct_retrieval": {
+      "hit_rate@k": 0.9833,
+      "reciprocal_rank": 0.8851,
+      "source_recall@k": 0.9833
+    },
+    "multi_source": {
+      "hit_rate@k": 1.0,
+      "reciprocal_rank": 0.9,
+      "source_recall@k": 0.6778
+    }
+  },
+  "by_difficulty": {
+    "easy": {
+      "hit_rate@k": 0.8889,
+      "reciprocal_rank": 0.717,
+      "source_recall@k": 0.8889
+    },
+    "hard": {
+      "hit_rate@k": 0.95,
+      "reciprocal_rank": 0.875,
+      "source_recall@k": 0.7083
+    },
+    "medium": {
+      "hit_rate@k": 0.9245,
+      "reciprocal_rank": 0.8601,
+      "source_recall@k": 0.9245
+    }
+  },
+  "n_questions": 100,
+  "n_errors": 0
+}
